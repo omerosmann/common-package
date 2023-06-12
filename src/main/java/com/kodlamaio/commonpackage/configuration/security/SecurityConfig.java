@@ -19,7 +19,7 @@ public class SecurityConfig {
 
 
         http.cors().and().authorizeHttpRequests()
-                .requestMatchers("/api/filters", "/api/cars/check-car-available/**","/api/paymnets/check")
+                .requestMatchers("/api/filters", "/api/cars/check-car-available/**","/api/paymnets/check", "/actuator/**")
                 .permitAll()
                 .requestMatchers("/api/**")
                 .hasAnyRole("user")
